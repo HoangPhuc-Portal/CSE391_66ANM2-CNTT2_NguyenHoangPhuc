@@ -60,7 +60,7 @@ strong {
   color: rgb(40, 224, 153);
 }
 #hero {
-  background-image: url(/BaiTap2/images/ocean.jpg);
+  background-image: url("/BaiTapThucHanh02/BaiTap2/images/ocean.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
