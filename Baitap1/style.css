@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+form {
+  margin: 20px;
+  width: 95%;
+  height: 50%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+input,
+textarea {
+  flex-grow: 1;
+  padding: 10px;
+  margin: -2px 20px;
+}
+textarea {
+  height: 200px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background: #6bb6df;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.note {
+  margin-right: 20px;
+}
