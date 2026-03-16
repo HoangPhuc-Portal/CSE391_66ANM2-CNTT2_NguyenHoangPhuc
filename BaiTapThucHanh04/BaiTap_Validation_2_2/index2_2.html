@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Đặt Hàng</title>
+  </head>
+  <body>
+    <h1>Form Đặt Hàng Trực Tuyến</h1>
+
+    <div class="form-container">
+      <!-- Tên sản phẩm -->
+      <div class="form-group">
+        <label for="san-pham"
+          >Tên sản phẩm <span style="color: red">*</span></label
+        >
+        <select id="san-pham">
+          <option value="">-- Chọn sản phẩm --</option>
+          <option value="Áo">Áo - 150.000đ</option>
+          <option value="Quần">Quần - 200.000đ</option>
+          <option value="Giày">Giày - 350.000đ</option>
+          <option value="Mũ">Mũ - 80.000đ</option>
+          <option value="Túi">Túi - 250.000đ</option>
+        </select>
+        <div class="error-msg" id="err-san-pham"></div>
+      </div>
+
+      <!-- Số lượng -->
+      <div class="form-group">
+        <label for="so-luong">Số lượng <span style="color: red">*</span></label>
+        <input
+          type="number"
+          id="so-luong"
+          min="1"
+          max="99"
+          placeholder="Nhập từ 1 đến 99"
+        />
+        <div class="error-msg" id="err-so-luong"></div>
+      </div>
+
+      <!-- Tổng tiền tự động -->
+      <div class="tong-tien" id="tong-tien-box">
+        Tổng tiền: <span id="tong-tien-gia">--</span>
+      </div>
+
+      <!-- Ngày giao hàng -->
+      <div class="form-group">
+        <label for="ngay-giao"
+          >Ngày giao hàng <span style="color: red">*</span></label
+        >
+        <input type="date" id="ngay-giao" />
+        <div class="error-msg" id="err-ngay-giao"></div>
+      </div>
+
+      <!-- Địa chỉ giao -->
+      <div class="form-group">
+        <label for="dia-chi"
+          >Địa chỉ giao hàng <span style="color: red">*</span></label
+        >
+        <input
+          type="text"
+          id="dia-chi"
+          placeholder="Nhập địa chỉ (ít nhất 10 ký tự)"
+        />
+        <div class="error-msg" id="err-dia-chi"></div>
+      </div>
+
+      <!-- Ghi chú -->
+      <div class="form-group">
+        <label for="ghi-chu">Ghi chú (không bắt buộc)</label>
+        <textarea id="ghi-chu" placeholder="Tối đa 200 ký tự..."></textarea>
+        <div class="char-count" id="char-count">0/200</div>
+        <div class="error-msg" id="err-ghi-chu"></div>
+      </div>
+
+      <!-- Phương thức thanh toán -->
+      <div class="form-group">
+        <label>Phương thức thanh toán <span style="color: red">*</span></label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="thanh-toan" value="COD" /> COD</label
+          >
+          <label
+            ><input type="radio" name="thanh-toan" value="Chuyển khoản" />
+            Chuyển khoản</label
+          >
+          <label
+            ><input type="radio" name="thanh-toan" value="Ví điện tử" /> Ví điện
+            tử</label
+          >
+        </div>
+        <div class="error-msg" id="err-thanh-toan"></div>
+      </div>
+
+      <!-- Nút submit -->
+      <button type="submit" id="btn-submit">Đặt hàng</button>
+    </div>
+
+    <!-- Div xác nhận đơn hàng -->
+    <div class="form-container" style="margin-top: 20px">
+      <div id="xac-nhan-div">
+        <h2>Xác nhận đơn hàng</h2>
+        <p><strong>Sản phẩm:</strong> <span id="xn-san-pham"></span></p>
+        <p><strong>Số lượng:</strong> <span id="xn-so-luong"></span></p>
+        <p><strong>Tổng tiền:</strong> <span id="xn-tong-tien"></span></p>
+        <p><strong>Ngày giao:</strong> <span id="xn-ngay-giao"></span></p>
+        <p><strong>Địa chỉ:</strong> <span id="xn-dia-chi"></span></p>
+        <p><strong>Thanh toán:</strong> <span id="xn-thanh-toan"></span></p>
+        <br />
+        <p style="font-weight: bold">Bạn có chắc muốn đặt hàng?</p>
+        <button class="btn-xacnhan" id="btn-xac-nhan">✅ Xác nhận</button>
+        <button class="btn-huy" id="btn-huy">❌ Hủy</button>
+      </div>
+
+      <!-- Thông báo thành công -->
+      <div id="thanh-cong-div">
+        Đặt hàng thành công! Cảm ơn bạn đã mua hàng.
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

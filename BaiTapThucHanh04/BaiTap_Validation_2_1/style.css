@@ -1,0 +1,18 @@
+#dang-ky {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 90vw;
+  height: 80vh;
+  border: 1px solid black;
+}
+.error-msg {
+  color: red;
+}
